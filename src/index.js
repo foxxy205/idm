@@ -10,11 +10,14 @@ import './css/fontawesome.css';
 import './css/themify-icons.css';
 import './css/animate.css';
 import './sass/style.scss';
-
+import { HashRouter  } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
+    <HashRouter>
+        <App />
+    </HashRouter>
+    
 );
 
 // If you want to start measuring performance in your app, pass a function
