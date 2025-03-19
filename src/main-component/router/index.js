@@ -18,10 +18,14 @@ import Displaycoin from '../../component/Displaycoin';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import {QueryClientProvider, QueryClient} from '@tanstack/react-query';
 import Moreinfo from '../../component/Moreinfo';
+import {HashRouter} from 'react-router-dom';
 
 const AllRoute = () => {
   const queryclient = new QueryClient()
   return (
+    <HashRouter>
+
+    
     <QueryClientProvider client={queryclient}> 
     <div className="App">
       <BrowserRouter>
@@ -47,6 +51,7 @@ const AllRoute = () => {
     </div>
     <ReactQueryDevtools />
     </QueryClientProvider>
+    </HashRouter>
   );
 }
 
