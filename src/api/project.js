@@ -1,12 +1,12 @@
 import pImg1 from '../images/portfolio/portfolio_item_image_1.webp'
 import pImg2 from '../images/portfolio/portfolio_item_image_2.webp'
 import pImg3 from '../images/portfolio/portfolio_item_image_3.webp'
-import pImg4 from '../images/case/case_image_1.webp'
-import pImg5 from '../images/case/case_image_2.webp'
-import pImg6 from '../images/case/case_image_3.webp'
+import pImg4 from '../images/case/stellar.png'
+import pImg5 from '../images/case/Uniswap.jpg'
+import pImg6 from '../images/case/Arbitrum.png'
 
 import pImg7 from '../images/portfolio/portfolio_item_image_4.webp'
-import pImg8 from '../images/portfolio/portfolio_item_image_5.webp'
+import pImg8 from '../images/case/Uniswap.jpg'
 import pImg9 from '../images/portfolio/portfolio_item_image_6.webp'
 import pImg10 from '../images/portfolio/portfolio_item_image_7.webp'
 import pImg11 from '../images/portfolio/portfolio_item_image_8.webp'
@@ -81,7 +81,7 @@ const Project = [
         // Country: 'Germany, Issum',
         // Technologies1: tImg1,
         // Technologies2: tImg2,
-        description: 'Creating software for Astarte Medical involves a meticulous process aimed at addressing their specific needs and objectives. It begins with thorough research and planning to understand the requirements goals of the project.',
+        description: 'The Stellar Lumens (XLM) airdrop is widely regarded as a benchmark for success in the cryptocurrency space. Launched by the Stellar Development Foundation in 2014, with a significant phase in 2018 via a partnership with Keybase, this campaign aimed to distribute XLM tokens globally to promote the adoption of the Stellar network',
     },
     {
         Id: '8',

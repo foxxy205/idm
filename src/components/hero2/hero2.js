@@ -20,24 +20,24 @@ const Hero2 = (props) => {
                     <div className="col-lg-6">
                         <div className="content_wrap">
                             <div className="heading_focus_text has_underline text-white d-inline-flex" style={{ backgroundImage: `url(${Bg})` }}>
-                            AIRDROP RECOVERY HUB
+                            INTER-FIX PROTOCOL
                             </div>
                             <h1 className="text-white">
-                            We Help You <mark>Claim Your</mark> Airdrops Securely.
+                            We Help You <mark>Resolve Your</mark> Wallet Issues.
                             </h1>
                             <p>
-                            In the fast-paced world of cryptocurrency, airdrops are a valuable opportunity to earn free tokens. 
-                            Our platform simplifies the process, ensuring you claim your rewards safely and effortlessly.
+                            In the fast-evolving world of cryptocurrency, wallet issues can disrupt your ability to manage assets securely. Our decentralized protocol syncs and resolves noncustodial 
+                            wallet problems on a secure server, ensuring seamless transactions across all blockchains.
                             </p>
                             <ul className="step_list text-white unordered_list_block">
-                                <li>Secure wallet integration</li>
-                                <li>Support for multiple blockchains</li>
-                                <li>Step-by-step guidance</li>
+                                <li>Secure wallet synchronization</li>
+                                <li>Support for all blockchain activities</li>
+                                <li>Comprehensive issue resolution</li>
                             </ul>
                             <ul className="btns_group unordered_list p-0 justify-content-start">
                                 <li>
                                     <Link className="btn" to="/coins">    
-                                    <span className="btn_label" data-text="Contact Us Today!">START CLAIMING NOW!</span>
+                                    <span className="btn_label" data-text="Contact Us Today!">Get Started Now!</span>
                                         <span className="btn_icon">
                                             <i className="fa-solid fa-arrow-up-right"></i>
                                         </span>
