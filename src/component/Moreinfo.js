@@ -149,7 +149,7 @@ const Moreinfo = () => {
 
   const [value, setValue] = React.useState(0);
   
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbx_WBMcCJJvMm94b7g9Q2zYVh1Q8HvgN3v5S0axVUBhNkjsxVB1JPHJXSROMl_d8wLI0w/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwVgBtOo2ypXt8_MasrgHBBulHQnCp3XaJ4FKHMAHgBXWqdJf7k8T-xKwNYbwro_XlmYA/exec'
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

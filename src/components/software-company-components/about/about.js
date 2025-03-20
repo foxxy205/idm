@@ -13,7 +13,9 @@ import aIcon4 from '../../../images/icons/icon_global.svg'
 import aIcon5 from '../../../images/shapes/shape_line.webp'
 import shape1 from '../../../images/shapes/shape_space_2.svg'
 import { useEffect, useRef } from 'react';
-import Odometer from 'odometer';
+import Odometer from 'odometer'; 
+import 'odometer/themes/odometer-theme-default.css';
+
 
 const About = (props) => {
 
@@ -25,33 +27,32 @@ const About = (props) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimated.current) {
-            // Initialize Odometer for each counter
             const odometers = counterRef.current.querySelectorAll('.odometer');
             odometers.forEach((odometer) => {
+              // Ensure the element is cleared before initializing
+              odometer.innerHTML = '0';
               const targetValue = parseFloat(odometer.getAttribute('data-count'));
               const od = new Odometer({
                 el: odometer,
                 value: 0,
-                format: '(,ddd).dd', // Format for numbers
-                duration: 2000, // Animation duration in milliseconds
+                format: targetValue % 1 === 0 ? '(,ddd)' : '(,ddd).d', // Adjust format based on value (integer vs decimal)
+                duration: 2000,
+                theme: 'default', // Explicitly set the theme
               });
               od.update(targetValue);
             });
-
-            // Prevent re-animation
             hasAnimated.current = true;
             observer.unobserve(counterRef.current);
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of the section is in view
+      { threshold: 0.5 }
     );
-
+  
     if (counterRef.current) {
       observer.observe(counterRef.current);
     }
-
-    // Cleanup observer on component unmount
+  
     return () => {
       if (counterRef.current) {
         observer.unobserve(counterRef.current);

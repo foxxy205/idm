@@ -536,3 +536,70 @@ body {
   height: 40px;
   object-fit: contain;
 }
+
+
+
+
+
+
+
+
+
+.about_funfact_counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.funfact_item {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.counter_value {
+  display: inline-flex; /* Use inline-flex to keep elements on the same line */
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  white-space: nowrap; /* Prevent wrapping of numbers and suffixes */
+}
+
+.odometer {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  display: inline-block; /* Ensure odometer stays inline */
+}
+
+.odometer.odometer-theme-default {
+  font-family: 'Roboto', sans-serif !important;
+  display: inline-block !important; /* Override any display changes */
+}
+
+.odometer-digit {
+  display: inline-block !important; /* Ensure digits stay inline */
+}
+
+.counter_value span:not(.odometer) {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #161616;
+  line-height: 1;
+}
+
+.funfact_title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #161616;
+  margin-top: 10px;
+  line-height: 1.2;
+}
