@@ -16,8 +16,8 @@ const Searchbar = ({ searchTerm, setSearchTerm }) => {
       
       <InputBase
         sx={{ ml: 1, flex: 1 }}
-        placeholder="Search coin here"
-        inputProps={{ 'aria-label': 'search coin here' }}
+        placeholder="Search Wallets here"
+        inputProps={{ 'aria-label': 'search Wallets here' }}
         value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
       />
