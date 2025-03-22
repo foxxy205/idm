@@ -20,7 +20,7 @@ const Hero2 = (props) => {
                     <div className="col-lg-6">
                         <div className="content_wrap">
                             <div className="heading_focus_text has_underline text-white d-inline-flex" style={{ backgroundImage: `url(${Bg})` }}>
-                            INTER-FIX PROTOCOL
+                            RECTIFY CHAIN
                             </div>
                             <h1 className="text-white">
                             We Help You <mark>Resolve Your</mark> Wallet Issues.
