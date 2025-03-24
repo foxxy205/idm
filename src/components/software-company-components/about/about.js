@@ -109,7 +109,7 @@ const About = (props) => {
                   <h3 className="funfact_title mb-0">Success Rate</h3>
                 </div>
               </div>
-                <a className="btn btn-primary" href="about.html">
+                <a className="btn btn-primary" href="#/coins">
                   <span className="btn_label" data-text="Claim Now">Resolve Now!</span>
                   <span className="btn_icon">
                     <i className="fa-solid fa-arrow-up-right"></i>
